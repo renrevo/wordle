@@ -13,7 +13,7 @@
 
 body {
   font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
-  height: 100vh;
+  height: 100%;
   display: grid;
   grid-template-rows: 1fr auto;
 }
