@@ -14,34 +14,29 @@
 
 body {
   height: 100vh;
+  font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
 }
 
 .game {
   display: -ms-grid;
   display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-grid-rows: 1fr auto;
       grid-template-rows: 1fr auto;
   height: 100%;
   gap: 1rem;
-  margin-left: 4%;
-  margin-right: 4%;
+  padding: 4%;
 }
 
 .keyboard {
   display: -ms-grid;
   display: grid;
-  gap: 0.25em;
-  padding: 1em 0.25em;
-}
-
-.keyboard__row {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(auto, 1.25em))[20];
-      grid-template-columns: repeat(20, minmax(auto, 1.25em));
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[20];
+      grid-template-columns: repeat(20, 1fr);
   gap: 0.25em;
 }
 

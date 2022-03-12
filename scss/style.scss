@@ -13,28 +13,23 @@
 
 body {
   height: 100vh;
+  font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
 }
 
 .game {
   display: grid;
+  justify-content: center;
   grid-template-rows: 1fr auto;
   height: 100%;
   gap: 1rem;
-  margin-left: 4%;
-  margin-right: 4%;
+  padding: 4%;
 }
 
 .keyboard {
   display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(20, 1fr);
   gap: 0.25em;
-  padding: 1em 0.25em;
-
-  &__row {
-    display: grid;
-    grid-template-columns: repeat(20, minmax(auto, 1.25em));
-    justify-content: center;
-    gap: 0.25em;
-  }
 }
 
 .key {
