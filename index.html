@@ -8,9 +8,10 @@
     <title>Wordle</title>
   </head>
   <body>
+    <div class="game">
       <div class="board"></div>
     <div class="keyboard">
-      <div class="keyboard__row">
+      <div class="keyboard__row" data-key="Q">
         <button class="key" data-key="Q">Q</button>
         <button class="key" data-key="W">W</button>
         <button class="key" data-key="E">E</button>
@@ -24,7 +25,7 @@
       </div>
 
       <div class="keyboard__row">
-          <div class="space"></div>
+        <div class="space"></div>
         <button class="key" data-key="A">A</button>
         <button class="key" data-key="S">S</button>
         <button class="key" data-key="D">D</button>
@@ -48,6 +49,7 @@
         <button class="key" data-key="M">M</button>
         <button data-delete class="key key--large">Delete</button>
       </div>
+    </div>
     </div>
   </body>
 </html>
