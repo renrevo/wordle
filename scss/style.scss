@@ -13,7 +13,7 @@
 
 body {
   height: 100vh;
-  font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
+  // font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
 }
 
 .game {
@@ -47,7 +47,7 @@ body {
   user-select: none;
   border-radius: 0.25em;
   height: 3em;
-  font-size: 1em;
+  font-size: 14px;
 
   &:hover,
   &:focus-visible {
