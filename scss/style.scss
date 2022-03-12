@@ -12,7 +12,6 @@
 }
 
 body {
-  font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
   height: 100vh;
 }
 
@@ -20,6 +19,9 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
   height: 100%;
+  gap: 1rem;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
 .keyboard {
@@ -36,7 +38,6 @@ body {
 }
 
 .key {
-  font-size: inherit;
   grid-column: span 2;
   border: none;
   display: flex;
@@ -50,7 +51,8 @@ body {
   cursor: pointer;
   user-select: none;
   border-radius: 0.25em;
-  height: 2.5em;
+  height: 3em;
+  font-size: 1em;
 
   &:hover,
   &:focus-visible {
@@ -61,4 +63,34 @@ body {
   &--large {
     grid-column: span 3;
   }
+
+  &--correct {
+    background-color: hsl(152, 72%, 36%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  &--wrong {
+    background-color: hsl(0, 0%, 24%);
+    color: hsl(0, 0%, 100%);
+  }
+
+  &--present {
+    background-color: hsl(48, 72%, 48%);
+    color: hsl(0, 0%, 100%);
+  }
+
+}
+
+.word-board {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(5, 4em);
+  grid-template-rows: repeat(6, 4em);
+  gap: 0.25em;
+}
+
+.tile {
+  border: 2px solid hsl(0, 0%, 84%);
+  border-radius: 0.25em;
 }

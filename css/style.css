@@ -13,7 +13,6 @@
 }
 
 body {
-  font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
   height: 100vh;
 }
 
@@ -23,6 +22,9 @@ body {
   -ms-grid-rows: 1fr auto;
       grid-template-rows: 1fr auto;
   height: 100%;
+  gap: 1rem;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
 .keyboard {
@@ -44,7 +46,6 @@ body {
 }
 
 .key {
-  font-size: inherit;
   grid-column: span 2;
   border: none;
   display: -webkit-box;
@@ -68,7 +69,8 @@ body {
       -ms-user-select: none;
           user-select: none;
   border-radius: 0.25em;
-  height: 2.5em;
+  height: 3em;
+  font-size: 1em;
 }
 
 .key:hover, .key:focus-visible {
@@ -78,5 +80,40 @@ body {
 
 .key--large {
   grid-column: span 3;
+}
+
+.key--correct {
+  background-color: #1a9e60;
+  color: white;
+}
+
+.key--wrong {
+  background-color: #3d3d3d;
+  color: white;
+}
+
+.key--present {
+  background-color: #d3af22;
+  color: white;
+}
+
+.word-board {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: (4em)[5];
+      grid-template-columns: repeat(5, 4em);
+  -ms-grid-rows: (4em)[6];
+      grid-template-rows: repeat(6, 4em);
+  gap: 0.25em;
+}
+
+.tile {
+  border: 2px solid #d6d6d6;
+  border-radius: 0.25em;
 }
 /*# sourceMappingURL=style.css.map */
